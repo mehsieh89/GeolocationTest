@@ -1,0 +1,34 @@
+<html>
+    <head>
+        <title>Welcome to HistoriCal</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <!-- Bootstrap core CSS -->
+    </head>
+    <body>
+
+    <!-- End Footer -->
+      <script src="https://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" crossorigin="anonymous"></script>
+      <script>
+      var mapCanvas;
+      $( document ).ready(function() {
+        if (navigator.geolocation) {
+          navigator.geolocation.getCurrentPosition(onSuccess, onError, {timeout:10000, enableHighAccuracy: true});
+        }
+      });
+
+      function onSuccess(position) {
+        console.log('great Sucess!!!');
+        console.log(position);
+      }
+
+      function onError() {
+        console.log('lame');
+      }
+
+      </script>
+      <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA_AfrYQz44BdWqNjg_Ej72ktR6oiyvmzI"></script>
+
+      <script src="assets/js/maps.js"></script>
+  </body>
+</html>
